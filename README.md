@@ -9,6 +9,7 @@ This project demonstrates how to create a database table and handle API calls us
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
+- [Testing the API Endpoints](#testing-the-api-endpoints)
 - [License](#license)
 
 ## Prerequisites
@@ -22,13 +23,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/my-api-project.git
+   git clone https://github.com/HarryVu298/NodeJS_database_API.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd my-api-project
+   cd NodeJS_database_API
    ```
 
 3. Install the necessary packages:
@@ -156,6 +157,40 @@ Before you begin, ensure you have met the following requirements:
     }
   }
   ```
+
+## Testing the API Endpoints
+
+You can test the API endpoints using a tool like Postman or cURL.
+
+### Get all users:
+
+```bash
+curl http://localhost:3000/users
+```
+
+### Get a single user by id:
+
+```bash
+curl http://localhost:3000/user/1
+```
+
+### Create a new user:
+
+```bash
+curl -X POST http://localhost:3000/user -H "Content-Type: application/json" -d '{"name":"John Doe","email":"john@example.com"}'
+```
+
+### Update a user:
+
+```bash
+curl -X PUT http://localhost:3000/user/1 -H "Content-Type: application/json" -d '{"name":"Jane Doe","email":"jane@example.com"}'
+```
+
+### Delete a user:
+
+```bash
+curl -X DELETE http://localhost:3000/user/1
+```
 
 ## License
 
